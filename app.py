@@ -143,6 +143,17 @@ st.subheader("Tren IKJI 2021-2025")
 
 st.line_chart(chart_tren["Fisik"])
 
+iksi_sekarang = data_di["IKSI"].iloc[0]
+
+if iksi_sekarang >= 80:
+    kategori = "🟢 Kinerja Sangat Baik"
+elif iksi_sekarang >= 70:
+    kategori = "🔵 Kinerja Baik"
+elif iksi_sekarang >= 55:
+    kategori = "🟡 Kinerja Kurang dan Perlu Perhatian"
+else:
+    kategori = "🔴 Kinerja Jelek dan Perlu Perhatian"
+
 st.write(kategori)
 # ====================================
 # ANALISIS DANA REHABILITASI
